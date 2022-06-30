@@ -11,7 +11,8 @@ import (
 // go get github.com/jinzhu/now (gorm)
 // go get github.com/golang-jwt/jwt (authentication)
 // go get -u gorm.io/driver/mysql (gorm mysql)
-// go get github.com/labstack/echo/v4/middleware panggil jwt
+// go get github.com/labstack/echo/v4/middleware (panggil jwt)
+// go get github.com/stretchr/testify/ (unit testing)
 
 func main() {
 	dbConn := config.InitDB()
