@@ -13,7 +13,7 @@ import (
 // go get -u gorm.io/driver/mysql (gorm mysql)
 // go get github.com/labstack/echo/v4/middleware (panggil jwt)
 // go get github.com/stretchr/testify/ (unit testing)
-
+// go get golang.org/x/crypto/bcrypt
 func main() {
 	dbConn := config.InitDB()
 	migration.InitMigrate(dbConn)
