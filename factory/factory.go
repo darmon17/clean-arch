@@ -16,6 +16,7 @@ func InitFactory(dbConn *gorm.DB) Presenter {
 	userData := _userData.NewUserRepository(dbConn)
 	userBusiness := _userBusiness.NewUserBusiness(userData)
 	userPresentation := _userPresentation.NewUserHandler(userBusiness)
+
 	return Presenter{
 		UserPrsenter: userPresentation,
 	}

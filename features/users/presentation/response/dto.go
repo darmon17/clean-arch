@@ -7,11 +7,11 @@ import (
 
 //ambil data yang akan di tampilkan
 type User struct {
-	ID        int       `json:"id" form:"id"`
-	Name      string    `json:"name" form:"name"`
-	Email     string    `json:"email" form:"email"`
-	Password  string    `json:"password" form:"password"`
-	CreatedAt time.Time `json:"created_at" form:"created_at"`
+	ID        int       `json:"id"`
+	Name      string    `json:"name"`
+	Email     string    `json:"email"`
+	Password  string    `json:"password"`
+	CreatedAt time.Time `json:"created_at"`
 }
 
 // untuk menampilkan data

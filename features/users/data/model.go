@@ -9,9 +9,9 @@ import (
 //database model (isi dari table yang di auto migrate di file migration)
 type User struct {
 	gorm.Model
-	Name     string `json:"name" form:"name"`
-	Email    string `json:"email" form:"email"`
-	Password string `json:"password" form:"password"`
+	Name     string
+	Email    string `gorm:"unique"`
+	Password string
 }
 
 // dto
@@ -32,7 +32,7 @@ func toCoreList(data []User) []users.Core {
 	}
 	return result
 }
-func fromCore(core users.Core) User {
+func FromCore(core users.Core) User {
 	return User{
 		Name:     core.Name,
 		Email:    core.Email,
